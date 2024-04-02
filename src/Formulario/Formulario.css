@@ -1,0 +1,20 @@
+.fuente{
+    color: #0033a0;
+    font-style:normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fondoboton{
+    background-color: #0033a0;
+    color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-weight: 700;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fondoboton:hover{
+    background-color: white;
+    color: #0033a0;
+}
