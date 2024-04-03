@@ -1,0 +1,196 @@
+[
+{
+  "nombreUsuario": "Laura Camila Hernández",
+  "documento": "123456789",
+  "contraseña": "admin123",
+  "placa": "caq125",
+  "marca": "Toyota",
+  "linea": "corolla",
+  "tipoVehiculo": "automovil",
+  "revisiones": [
+    {
+      "fecha": "2024-03-27",
+      "estadoServicio": "Iniciado",
+      "servicio": "Mantenimiento por kilometraje",
+      "resultado": "Aprobado"
+    },
+    {
+      "fecha": "2024-12-02",
+      "estadoServicio": "En proceso",
+      "servicio": "Alineacion",
+      "resultado": "Rechazado"
+    },
+    {
+      "fecha": "2023-03-25",
+      "estadoServicio": "Finalizado",
+      "servicio": "Cambio Bateria",
+      "resultado": "Aprobado"
+    }
+  ]
+},
+{
+    "nombreUsuario": "Juan Pérez",
+    "documento": "987654321",
+    "contraseña": "password123",
+    "placa": "abc123",
+    "marca": "Honda",
+    "linea": "Civic",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2024-04-15",
+        "estadoServicio": "Iniciado",
+        "servicio": "Cambio de aceite",
+        "resultado": "Aprobado"
+      },
+      {
+        "fecha": "2024-05-10",
+        "estadoServicio": "Finalizado",
+        "servicio": "Reparación de frenos",
+        "resultado": "Rechazado"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Juan Toto",
+    "documento": "456789123",
+    "contraseña": "admin456",
+    "placa": "def456",
+    "marca": "Chevrolet",
+    "linea": "Spark",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2024-06-20",
+        "estadoServicio": "Iniciado",
+        "servicio": "Cambio de llantas",
+        "resultado": "Aprobado"
+      },
+      {
+        "fecha": "2024-07-05",
+        "estadoServicio": "Finalizado",
+        "servicio": "Revisión de motor",
+        "resultado": "Aprobado"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Carlos Gómez",
+    "documento": "789123456",
+    "contraseña": "pass123",
+    "placa": "ghi789",
+    "marca": "Ford",
+    "linea": "Fiesta",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2024-08-10",
+        "estadoServicio": "En proceso",
+        "servicio": "Revisión de suspensión",
+        "resultado": "Pendiente"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Ana Martínez",
+    "documento": "321654987",
+    "contraseña": "abc456",
+    "placa": "jkl321",
+    "marca": "Nissan",
+    "linea": "Sentra",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2024-09-15",
+        "estadoServicio": "Finalizado",
+        "servicio": "Cambio de filtro de aire",
+        "resultado": "Aprobado"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Pedro Rodríguez",
+    "documento": "456789321",
+    "contraseña": "qwerty123",
+    "placa": "mno987",
+    "marca": "Kia",
+    "linea": "Rio",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2024-10-20",
+        "estadoServicio": "Iniciado",
+        "servicio": "Cambio de bujías",
+        "resultado": "Rechazado"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Sofía García",
+    "documento": "147258369",
+    "contraseña": "pass456",
+    "placa": "pqr456",
+    "marca": "Hyundai",
+    "linea": "Accent",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2024-11-10",
+        "estadoServicio": "Finalizado",
+        "servicio": "Alineación y balanceo",
+        "resultado": "Aprobado"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Luisa Martínez",
+    "documento": "258369147",
+    "contraseña": "password789",
+    "placa": "stu789",
+    "marca": "Mazda",
+    "linea": "Mazda3",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2025-01-05",
+        "estadoServicio": "Iniciado",
+        "servicio": "Cambio de pastillas de freno",
+        "resultado": "Pendiente"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Eduardo Sánchez",
+    "documento": "369147258",
+    "contraseña": "admin789",
+    "placa": "vwx456",
+    "marca": "Volkswagen",
+    "linea": "Gol",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2025-02-15",
+        "estadoServicio": "En proceso",
+        "servicio": "Cambio de amortiguadores",
+        "resultado": "Pendiente"
+      }
+    ]
+  },
+  {
+    "nombreUsuario": "Gabriela Pérez",
+    "documento": "369258147",
+    "contraseña": "pass789",
+    "placa": "yzx789",
+    "marca": "Renault",
+    "linea": "Sandero",
+    "tipoVehiculo": "automovil",
+    "revisiones": [
+      {
+        "fecha": "2025-03-20",
+        "estadoServicio": "Iniciado",
+        "servicio": "Cambio de aceite",
+        "resultado": "Pendiente"
+      }
+    ]
+  }
+]              

@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Formulario.css"
+import Swal from 'sweetalert2'
+import baseDatosCliente from "../utils/baseDatosCliente.json"
 
 export function Formulario(){
 
@@ -14,7 +16,33 @@ export function Formulario(){
 
     function procesarFormulario(evento){
         evento.preventDefault()
-        enrutador("/home")
+        let busqueda=baseDatosCliente.find(function(usuario) {
+            return(usuario.documento==verusuario && usuario.contraseña==vercontraseña
+             && usuario.placa==verplaca)
+    })
+    if (busqueda==undefined) {
+        
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Usuario Incorrecto",
+            footer: 'Intenta de nuevo'
+            
+          });
+    } else {
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Bienvenido",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        
+     
+          
+    setTimeout (enrutador("/home", {state:{usuario:busqueda}}),5000) 
+    
+    }
         
     }
 

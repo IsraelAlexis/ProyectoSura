@@ -1,11 +1,17 @@
 import "./Home.css"
 
-import basedatos from "../utils/basedatos.json"
+import baseDatosCliente from "../utils/baseDatosCliente.json"
+
+import { useLocation } from "react-router-dom"
 
 
 export function Home() {
 
-    console.log(basedatos.length)
+    let location=useLocation() //recibiendi cositas
+    let usuario=location.state?.usuario
+    console.log(usuario)
+
+    console.log(baseDatosCliente.length)
     
 
     return (
@@ -14,43 +20,38 @@ export function Home() {
            <section className="container mt-5">
                 <div className="row">
                     <div className="col-12 col-md-6">
-                        <h3 className="fuente">Servicios a un clic</h3>
-                        <h2 className="text-muted">HOLA {basedatos[0].nombreUsuario} <span className="fuente"></span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, enim accusantium? Facilis alias, earum in, veritatis dicta accusamus sunt, illum quod officia necessitatibus asperiores. Quae suscipit nostrum, molestiae autem cupiditate est nihil voluptate, dolorem quasi cumque eius! Id ab reiciendis ad ullam dignissimos cumque inventore dicta quia, nostrum rem fugiat?
+                        <h3 className="fuente">Bienvenid@ a Autos Sura</h3>
+                        <h2 className="text-muted"> {usuario.nombreUsuario} <span className="fuente"></span></h2>
+                        <p>En este espacio, puedes observar la cantidad de servicios que le has realizado a tu vehiculo
                         </p>
+                        <img src="../../src/assets/img/Asistencia-siempre-con-el-Seguro-de-Autos-SURA.jpg" className="img-fluid" alt="" />
                     </div>
                     <div className="col-12 col-md-6">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tu Grupo Familiar</option>
-                        <option value="1">one</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
                     <div className="row mt-5">
-                        <div className="col-12 col-md-2"><i class="bi bi-person-arms-up fs-1 fuente "></i></div>
-                        <div className="col-12 col-md-10"><h4 className="fuente">Medico de Familia</h4>
-                        <p>{basedatos[0].medicoDeFamilia}</p>
+                        <div className="col-12 col-md-2"><i class="bi bi-credit-card-2-front fs-1 fuente"></i></div>
+                        <div className="col-12 col-md-10"><h4 className="fuente">Placa</h4>
+                        <p>{usuario.placa}</p>
                         </div>  
                         <hr />
                     </div>
                     <div className="row mt-1">
-                    <div className="col-12 col-md-2"><i class="bi bi-person-circle fs-1 fuente"></i></div>
-                        <div className="col-12 col-md-10"><h4 className="fuente">Grupo ingreso</h4>
-                        <p>{basedatos[0].grupoDeIngreso}</p>
+                    <div className="col-12 col-md-2"><i class="bi bi-car-front-fill fs-1 fuente"></i></div>
+                        <div className="col-12 col-md-10"><h4 className="fuente">Tipo de vehiculo</h4>
+                        <p>{usuario.tipoVehiculo}</p>
                         </div>
                         <hr />
                     </div>
                     <div className="row mt-1">
-                    <div className="col-12 col-md-2"><i class="bi bi-briefcase-fill fs-1 fuente"></i></div>
-                        <div className="col-12 col-md-10"><h4 className="fuente">Estado Afiliacion</h4>
-                        <p>Activo</p>
+                    <div className="col-12 col-md-2"><i class="bi bi-truck fs-1 fuente"></i></div>
+                        <div className="col-12 col-md-10"><h4 className="fuente">Marca</h4>
+                        <p>{usuario.marca}</p>
                         </div>
                         <hr />
                     </div>
                     <div className="row mt-1">
-                    <div className="col-12 col-md-2"><i class="bi bi-hospital fs-1 fuente"></i></div>
-                        <div className="col-12 col-md-10"><h4 className="fuente">IPS</h4>
-                        <p>{basedatos[0].ips}</p>
+                    <div className="col-12 col-md-2"><i class="bi bi-bicycle fs-1 fuente"></i></div>
+                        <div className="col-12 col-md-10"><h4 className="fuente">Linea</h4>
+                        <p>{usuario.linea}</p>
                         </div>
                     </div>
                     </div>
@@ -59,21 +60,24 @@ export function Home() {
             <hr />
             <section className="container">
                 <div className="row">
-                    <div className="col-12 col-md-5">
-                        <h5>Paciente {basedatos[0].nombreUsuario}, estas son tus proximas Citas:</h5>
+                    <div className="col-12 col-md-8">
+                        <h5>Sr(a) {usuario.nombreUsuario}, estos son los servicios que has realizado a tu vehículo:</h5>
                     </div>
                 </div>
             </section>
             <section className="container my-5">
                 <div className="row row-cols-1 row-cols-md-3">
                     {
-                        basedatos[0].citasMedicas.map(function(cita){
+                        usuario.revisiones.map(function(cita){
                             return(
                                 <div className="col">
                                     <div className="card h-100 shadow px-2 fuente">
-                                        <h3>{cita.especialidad}</h3>
-                                        <h4><i class="bi bi-calendar-check"></i> {cita.fecha}</h4>
-                                        <h4>{cita.direccion}</h4>
+                                    <h4>Fecha: <i class="bi bi-calendar-check"></i>  {cita.fecha}</h4>
+                                    <hr />
+                                        <h3>Servicio:{cita.servicio}</h3>
+                                        
+                                        <h4>Estado servicio: {cita.estadoServicio}</h4>
+                                        <h4>Resultado: {cita.resultado}</h4>
                                         
                                     </div>
                                 </div>
