@@ -59,7 +59,7 @@ export function Formulario(){
                         <input 
                             type="text" 
                             class="form-control" 
-                            placeholder="placa" 
+                            placeholder="Placa" 
                             id="placa"
                             onChange={function(evento){
                                 guardarPlaca(evento.target.value)
@@ -71,7 +71,7 @@ export function Formulario(){
                         <input 
                             type="text" 
                             class="form-control" 
-                            placeholder="Usuario" 
+                            placeholder="Identificación" 
                             id="identificacion"
                             onChange={function(evento){
                                 guardarUsuario(evento.target.value)

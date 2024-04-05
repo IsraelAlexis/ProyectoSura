@@ -9,6 +9,7 @@ export function Home() {
 
     let location=useLocation() //recibiendi cositas
     let usuario=location.state?.usuario
+    
     console.log(usuario)
 
     console.log(baseDatosCliente.length)
